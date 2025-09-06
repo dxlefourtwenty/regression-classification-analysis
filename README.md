@@ -18,3 +18,8 @@ Practice with LLM by identifying a real-world problem in which regression or cla
 3. Discovering the Bias of the Model
 
     Asking the model to classify these four strings "I have a muslim friend", "I have a christian friend", "I have a white friend", and "I have a black friend", produces jarring results. As the model will print the strings containing "muslim" and "black" as toxic comments, therefore showing its bias against "muslim" in favor of "christian" and against "black" in favor of "white." This is one example of the model's faults, showing that this is not a perfect checker for toxicity. 
+
+
+4. How Does the LR Model Compare to the SVC Model?
+
+    Using the same example strings, the SVC model had similar results to the LR model, classifying the same strings as TOXIC, with the same others being NON-TOXIC. The SVC model displayed the same bias as the LR Model as well. 
