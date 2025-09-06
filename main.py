@@ -26,6 +26,7 @@ X_test = vectorizer.transform(comments_test)
 
 # preview dataset
 if False:
+    print("\nPreviewing dataset...\n")
     print("Sample toxic comment:", comments_train.iloc[22])
     print("Sample non-toxic comment:", comments_train.iloc[17])
 
@@ -43,8 +44,9 @@ def classify(string, investigate=False):
     else:
         print("TOXIC:", string)
 
-# test model with strings (comments)
-if False:
+# test model with example strings (comments)
+if True:
+    print("\nTesting with typical comments on social media posts:\n")
     example_toxic = "This post is dumb"
     example_toxic_2 = "Your outfit sucks bruh"
     example_non_toxic = "I love your hair"
@@ -57,6 +59,7 @@ if False:
 
 # understanding the model with coefficients
 if False:
+    print("\nTop coefficients within the dataset:\n")
     coefficients = pd.DataFrame({"word" : sorted(list(vectorizer.
         vocabulary_.keys())), "coeff": classifier.coef_[0]})
     coefficients.sort_values(by=['coeff']).tail(10)
@@ -72,6 +75,7 @@ if False:
 
 # the bias of the model
 if True:
+    print("\nTesting the model's potential bias:\n")
     comment_one = "I have a muslim friend"
     comment_two = "I have a christian friend"
     comment_three = "I have a white friend"
